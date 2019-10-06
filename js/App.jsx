@@ -1,4 +1,5 @@
 import React from 'react';
+import Form from './Form.jsx';
 
 
 
@@ -11,6 +12,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1>WeatherApp</h1>
+                <Form/>
             </div>
         )
     }
