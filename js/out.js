@@ -22587,7 +22587,14 @@ var App = function (_React$Component) {
             var API = 'http://api.openweathermap.org/data/2.5/weather?q=' + _this.state.value + '&APPID=' + APIkey;
 
             fetch(API).then(function (response) {
-                return console.log(response);
+                if (response.ok) {
+                    return response;
+                }
+                throw Error('Nie udało się pobrać danych');
+            }).then(function (response) {
+                return response.json();
+            }).then(function (data) {
+                return console.log(data);
             }).catch(function (err) {
                 return console.log(err);
             });
