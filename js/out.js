@@ -22555,9 +22555,19 @@ var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
     function App() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+            value: ""
+        }, _this.handleInputChange = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(App, [{
@@ -22571,7 +22581,7 @@ var App = function (_React$Component) {
                     null,
                     'WeatherApp'
                 ),
-                _react2.default.createElement(_Form2.default, null),
+                _react2.default.createElement(_Form2.default, { value: this.state.value }),
                 _react2.default.createElement(_Result2.default, null)
             );
         }
@@ -22599,12 +22609,16 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Form = function Form() {
+var Form = function Form(props) {
 
     return _react2.default.createElement(
         "form",
         null,
-        _react2.default.createElement("input", { type: "text" }),
+        _react2.default.createElement("input", {
+            type: "text",
+            value: props.value,
+            placeholder: "Wpisz miasto"
+        }),
         _react2.default.createElement(
             "button",
             null,

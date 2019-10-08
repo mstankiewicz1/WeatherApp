@@ -7,13 +7,21 @@ import Result from './Result.jsx';
 class App extends React.Component {
 
 
+    state = {
+      value: "",
+    };
 
 
+    handleInputChange = () => {
+
+    };
+
+    
     render() {
         return (
             <div>
                 <h1>WeatherApp</h1>
-                <Form/>
+                <Form value={this.state.value}/>
                 <Result/>
             </div>
         )
