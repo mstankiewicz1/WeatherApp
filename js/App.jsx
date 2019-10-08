@@ -12,16 +12,18 @@ class App extends React.Component {
     };
 
 
-    handleInputChange = () => {
-
+    handleInputChange = e => {
+        this.setState({
+            value: e.target.value,
+        })
     };
 
-    
+
     render() {
         return (
             <div>
                 <h1>WeatherApp</h1>
-                <Form value={this.state.value}/>
+                <Form value={this.state.value} change={this.handleInputChange}/>
                 <Result/>
             </div>
         )

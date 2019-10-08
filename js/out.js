@@ -22567,7 +22567,11 @@ var App = function (_React$Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             value: ""
-        }, _this.handleInputChange = function () {}, _temp), _possibleConstructorReturn(_this, _ret);
+        }, _this.handleInputChange = function (e) {
+            _this.setState({
+                value: e.target.value
+            });
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(App, [{
@@ -22581,7 +22585,7 @@ var App = function (_React$Component) {
                     null,
                     'WeatherApp'
                 ),
-                _react2.default.createElement(_Form2.default, { value: this.state.value }),
+                _react2.default.createElement(_Form2.default, { value: this.state.value, change: this.handleInputChange }),
                 _react2.default.createElement(_Result2.default, null)
             );
         }
@@ -22617,7 +22621,8 @@ var Form = function Form(props) {
         _react2.default.createElement("input", {
             type: "text",
             value: props.value,
-            placeholder: "Wpisz miasto"
+            placeholder: "Wpisz miasto",
+            onChange: props.change
         }),
         _react2.default.createElement(
             "button",
