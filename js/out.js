@@ -22551,6 +22551,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+var APIkey = '0a8eaf040f6695b55b59f51d06d46254';
+
 var App = function (_React$Component) {
     _inherits(App, _React$Component);
 
@@ -22566,10 +22568,28 @@ var App = function (_React$Component) {
         }
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
-            value: ""
+            value: '',
+            data: '',
+            city: '',
+            sunrise: '',
+            sunset: '',
+            temp: '',
+            pressure: '',
+            wind: '',
+            err: ''
         }, _this.handleInputChange = function (e) {
             _this.setState({
                 value: e.target.value
+            });
+        }, _this.handleCitySubmit = function (e) {
+            e.preventDefault();
+
+            var API = 'http://api.openweathermap.org/data/2.5/weather?q=' + _this.state.value + '&APPID=' + APIkey;
+
+            fetch(API).then(function (response) {
+                return console.log(response);
+            }).catch(function (err) {
+                return console.log(err);
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -22585,7 +22605,11 @@ var App = function (_React$Component) {
                     null,
                     'WeatherApp'
                 ),
-                _react2.default.createElement(_Form2.default, { value: this.state.value, change: this.handleInputChange }),
+                _react2.default.createElement(_Form2.default, {
+                    value: this.state.value,
+                    change: this.handleInputChange,
+                    submit: this.handleCitySubmit
+                }),
                 _react2.default.createElement(_Result2.default, null)
             );
         }
@@ -22617,7 +22641,7 @@ var Form = function Form(props) {
 
     return _react2.default.createElement(
         "form",
-        null,
+        { onSubmit: props.submit },
         _react2.default.createElement("input", {
             type: "text",
             value: props.value,
