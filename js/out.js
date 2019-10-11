@@ -22604,13 +22604,14 @@ var App = function (_React$Component) {
                     sunset: data.sys.sunset,
                     temp: data.main.temp,
                     pressure: data.main.pressure,
-                    wind: data.wind,
+                    wind: data.wind.speed,
                     city: _this.state.value
                 });
             }).catch(function (err) {
                 console.log(err);
                 _this.setState({
-                    err: true
+                    err: true,
+                    city: _this.state.value
                 });
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
@@ -22632,7 +22633,7 @@ var App = function (_React$Component) {
                     change: this.handleInputChange,
                     submit: this.handleCitySubmit
                 }),
-                _react2.default.createElement(_Result2.default, { error: this.state.err })
+                _react2.default.createElement(_Result2.default, { weather: this.state })
             );
         }
     }]);
@@ -22698,14 +22699,49 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Result = function Result(props) {
+    var _props$weather = props.weather,
+        data = _props$weather.data,
+        city = _props$weather.city,
+        sunrise = _props$weather.sunrise,
+        sunset = _props$weather.sunset,
+        temp = _props$weather.temp,
+        pressure = _props$weather.pressure,
+        wind = _props$weather.wind,
+        err = _props$weather.err;
+
 
     return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
-            'h1',
+            'div',
             null,
-            String(props.error)
+            'Pogoda dla: ',
+            city
+        ),
+        _react2.default.createElement(
+            'div',
+            null,
+            'Temperatura: ',
+            temp
+        ),
+        _react2.default.createElement(
+            'div',
+            null,
+            'Pogoda dla: ',
+            city
+        ),
+        _react2.default.createElement(
+            'div',
+            null,
+            'Pogoda dla: ',
+            city
+        ),
+        _react2.default.createElement(
+            'div',
+            null,
+            'Pogoda dla: ',
+            city
         )
     );
 };

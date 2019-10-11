@@ -51,7 +51,7 @@ class App extends React.Component {
                     sunset: data.sys.sunset,
                     temp: data.main.temp,
                     pressure: data.main.pressure,
-                    wind: data.wind,
+                    wind: data.wind.speed,
                     city: this.state.value,
                 })
             })
@@ -59,6 +59,7 @@ class App extends React.Component {
                 console.log(err);
                 this.setState({
                     err: true,
+                    city: this.state.value,
                 })
             })
         };
@@ -73,7 +74,7 @@ class App extends React.Component {
                     change={this.handleInputChange}
                     submit={this.handleCitySubmit}
                 />
-                <Result error={this.state.err}/>
+                <Result weather={this.state}/>
             </div>
         )
     }
