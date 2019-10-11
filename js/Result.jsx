@@ -2,11 +2,11 @@ import React from 'react';
 
 
 
-const Result = () => {
+const Result = props => {
 
     return (
         <div>
-            <h1>Tu jest rezultat</h1>
+            <h1>{String(props.error)}</h1>
         </div>
     )
 };

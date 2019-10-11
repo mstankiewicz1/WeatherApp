@@ -22576,7 +22576,7 @@ var App = function (_React$Component) {
             temp: '',
             pressure: '',
             wind: '',
-            err: ''
+            err: false
         }, _this.handleInputChange = function (e) {
             _this.setState({
                 value: e.target.value
@@ -22594,9 +22594,24 @@ var App = function (_React$Component) {
             }).then(function (response) {
                 return response.json();
             }).then(function (data) {
-                return console.log(data);
+
+                var time = new Date().toLocaleString();
+
+                _this.setState({
+                    err: false,
+                    date: time,
+                    sunrise: data.sys.sunrise,
+                    sunset: data.sys.sunset,
+                    temp: data.main.temp,
+                    pressure: data.main.pressure,
+                    wind: data.wind,
+                    city: _this.state.value
+                });
             }).catch(function (err) {
-                return console.log(err);
+                console.log(err);
+                _this.setState({
+                    err: true
+                });
             });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
@@ -22617,7 +22632,7 @@ var App = function (_React$Component) {
                     change: this.handleInputChange,
                     submit: this.handleCitySubmit
                 }),
-                _react2.default.createElement(_Result2.default, null)
+                _react2.default.createElement(_Result2.default, { error: this.state.err })
             );
         }
     }]);
@@ -22682,7 +22697,7 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Result = function Result() {
+var Result = function Result(props) {
 
     return _react2.default.createElement(
         'div',
@@ -22690,7 +22705,7 @@ var Result = function Result() {
         _react2.default.createElement(
             'h1',
             null,
-            'Tu jest rezultat'
+            String(props.error)
         )
     );
 };

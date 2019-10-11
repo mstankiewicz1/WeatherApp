@@ -17,7 +17,7 @@ class App extends React.Component {
       temp: '',
       pressure: '',
       wind: '',
-      err: '',
+      err: false,
     };
 
 
@@ -40,12 +40,28 @@ class App extends React.Component {
                 throw Error('Nie udało się pobrać danych');
             })
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
 
+                const time = new Date().toLocaleString();
 
-            .catch(err => console.log(err))
-
-    };
+                this.setState({
+                    err: false,
+                    date: time,
+                    sunrise: data.sys.sunrise,
+                    sunset: data.sys.sunset,
+                    temp: data.main.temp,
+                    pressure: data.main.pressure,
+                    wind: data.wind,
+                    city: this.state.value,
+                })
+            })
+            .catch(err => {
+                console.log(err);
+                this.setState({
+                    err: true,
+                })
+            })
+        };
 
 
     render() {
@@ -57,7 +73,7 @@ class App extends React.Component {
                     change={this.handleInputChange}
                     submit={this.handleCitySubmit}
                 />
-                <Result/>
+                <Result error={this.state.err}/>
             </div>
         )
     }
