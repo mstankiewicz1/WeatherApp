@@ -17,15 +17,36 @@ const Result = props => {
         const tempCelciusz = Math.round(temp - 273.15).toFixed(2);
 
         content = (
-            <div>
-                <h3>Wyniki wyszukiwania dla <em>{city}</em></h3>
-                <h4>Dane dla dnia i godziny: {date}</h4>
-                <h4>Aktualna temperatura: {tempCelciusz} &#176;C</h4>
-                <h4>Wschód słońca o: {sunriseTime}</h4>
-                <h4>Zachód słońca o: {sunsetTime}</h4>
-                <h4>Aktualna sila wiatru: {wind} m/s</h4>
-                <h4>Aktualne ciśnienie: {pressure} hPa</h4>
-            </div>
+            <table>
+                    <tr>
+                        <td>Wyniki wyszukiwania dla:</td>
+                        <td><strong>{city}</strong></td>
+                    </tr>
+                    <tr>
+                        <td>Dane dla dnia i godziny:</td>
+                        <td>{date}</td>
+                    </tr>
+                    <tr>
+                        <td>Aktualna temperatura:</td>
+                        <td>{tempCelciusz} &#176;C</td>
+                    </tr>
+                    <tr>
+                        <td>Wschód słońca o:</td>
+                        <td>{sunriseTime}</td>
+                    </tr>
+                    <tr>
+                        <td>Zachód słońca o:</td>
+                        <td>{sunsetTime}</td>
+                    </tr>
+                    <tr>
+                        <td>Aktualna sila wiatru:</td>
+                        <td>{wind} m/s</td>
+                    </tr>
+                    <tr>
+                        <td>Aktualne ciśnienie:</td>
+                        <td>{pressure} hPa</td>
+                    </tr>
+            </table>
         )
     }
 

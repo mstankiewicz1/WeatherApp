@@ -22720,56 +22720,112 @@ var Result = function Result(props) {
         var tempCelciusz = Math.round(temp - 273.15).toFixed(2);
 
         content = _react2.default.createElement(
-            "div",
+            "table",
             null,
             _react2.default.createElement(
-                "h3",
+                "tr",
                 null,
-                "Wyniki wyszukiwania dla ",
                 _react2.default.createElement(
-                    "em",
+                    "td",
                     null,
-                    city
+                    "Wyniki wyszukiwania dla:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    _react2.default.createElement(
+                        "strong",
+                        null,
+                        city
+                    )
                 )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Dane dla dnia i godziny: ",
-                date
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Dane dla dnia i godziny:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    date
+                )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Aktualna temperatura: ",
-                tempCelciusz,
-                " \xB0C"
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Aktualna temperatura:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    tempCelciusz,
+                    " \xB0C"
+                )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Wsch\xF3d s\u0142o\u0144ca o: ",
-                sunriseTime
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Wsch\xF3d s\u0142o\u0144ca o:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    sunriseTime
+                )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Zach\xF3d s\u0142o\u0144ca o: ",
-                sunsetTime
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Zach\xF3d s\u0142o\u0144ca o:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    sunsetTime
+                )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Aktualna sila wiatru: ",
-                wind,
-                " m/s"
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Aktualna sila wiatru:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    wind,
+                    " m/s"
+                )
             ),
             _react2.default.createElement(
-                "h4",
+                "tr",
                 null,
-                "Aktualne ci\u015Bnienie: ",
-                pressure,
-                " hPa"
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    "Aktualne ci\u015Bnienie:"
+                ),
+                _react2.default.createElement(
+                    "td",
+                    null,
+                    pressure,
+                    " hPa"
+                )
             )
         );
     }

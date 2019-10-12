@@ -2,29 +2,51 @@
     box-sizing: border-box;
 }
 
+body {
+    background: rgb(56,56,70);
+    background: linear-gradient(90deg, rgba(56,56,70,1) 0%, rgba(15,150,237,1) 0%, rgba(78,104,213,1) 41%);
+}
+
 .app input,  .app button {
-    margin: 20px;
     padding: 10px 20px;
-    border: 2px solid grey;
-    background-color: white;
     transition: .3s;
 }
 
-.app button {
+input {
+    display: block;
+    width: 50vw;
+    height: 7.5vh;
+    margin: auto;
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 3vh;
+    font-size: 4vw;
+    font-weight: bold;
+    color: grey;
+}
+
+button {
+    display: block;
+    width: 50vw;
+    height: 7.5vh;
+    margin: auto;
     cursor: pointer;
+    font-size: 4vw;
+    color: grey;
+    font-weight: bold;
+    background-color: yellow;
 }
 
 .app button:hover {
-    background-color: black;
-    color: white;
-    border-color: black;
+    color: forestgreen;
+    border: 2px solid forestgreen;
 }
 
 .result {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-top: 50px;
-    border-top: 2px solid #ddd;
+    margin-top: 7vh;
+    border-top: 2px solid white;
+    text-align: center;
+
 }
 
 .result h3, .result h4 {
@@ -33,4 +55,8 @@
 
 .result em {
     font-weight: bold;
+}
+table {
+    text-align: center;
+    margin: auto;
 }
