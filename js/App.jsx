@@ -67,7 +67,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="app">
                 <h1>WeatherApp</h1>
                 <Form
                     value={this.state.value}

@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+.app input,  .app button {
+    margin: 20px;
+    padding: 10px 20px;
+    border: 2px solid grey;
+    background-color: white;
+    transition: .3s;
+}
+
+.app button {
+    cursor: pointer;
+}
+
+.app button:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+.result {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-top: 50px;
+    border-top: 2px solid #ddd;
+}
+
+.result h3, .result h4 {
+    font-weight: normal;
+}
+
+.result em {
+    font-weight: bold;
+}
