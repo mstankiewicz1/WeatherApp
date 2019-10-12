@@ -22569,7 +22569,7 @@ var App = function (_React$Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             value: '',
-            data: '',
+            date: '',
             city: '',
             sunrise: '',
             sunset: '',
@@ -22700,7 +22700,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Result = function Result(props) {
     var _props$weather = props.weather,
-        data = _props$weather.data,
+        date = _props$weather.date,
         city = _props$weather.city,
         sunrise = _props$weather.sunrise,
         sunset = _props$weather.sunset,
@@ -22710,39 +22710,74 @@ var Result = function Result(props) {
         err = _props$weather.err;
 
 
+    var content = null;
+
+    if (!err && city) {
+
+        var sunriseTime = new Date(sunrise * 1000).toLocaleTimeString();
+        var sunsetTime = new Date(sunset * 1000).toLocaleTimeString();
+
+        var tempCelciusz = Math.round(temp - 273.15).toFixed(2);
+
+        content = _react2.default.createElement(
+            "div",
+            null,
+            _react2.default.createElement(
+                "h3",
+                null,
+                "Wyniki wyszukiwania dla ",
+                _react2.default.createElement(
+                    "em",
+                    null,
+                    city
+                )
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Dane dla dnia i godziny: ",
+                date
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Aktualna temperatura: ",
+                tempCelciusz,
+                " \xB0C"
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Wsch\xF3d s\u0142o\u0144ca o: ",
+                sunriseTime
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Zach\xF3d s\u0142o\u0144ca o: ",
+                sunsetTime
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Aktualna sila wiatru: ",
+                wind,
+                " m/s"
+            ),
+            _react2.default.createElement(
+                "h4",
+                null,
+                "Aktualne ci\u015Bnienie: ",
+                pressure,
+                " hPa"
+            )
+        );
+    }
+
     return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-            'div',
-            null,
-            'Pogoda dla: ',
-            city
-        ),
-        _react2.default.createElement(
-            'div',
-            null,
-            'Temperatura: ',
-            temp
-        ),
-        _react2.default.createElement(
-            'div',
-            null,
-            'Pogoda dla: ',
-            city
-        ),
-        _react2.default.createElement(
-            'div',
-            null,
-            'Pogoda dla: ',
-            city
-        ),
-        _react2.default.createElement(
-            'div',
-            null,
-            'Pogoda dla: ',
-            city
-        )
+        "div",
+        { className: "result" },
+        err ? "Nie mamy w bazie " + city : content
     );
 };
 
