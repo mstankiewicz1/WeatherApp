@@ -22675,7 +22675,8 @@ var Form = function Form(props) {
             "button",
             null,
             "Wyszukaj miasto"
-        )
+        ),
+        _react2.default.createElement("hr", null)
     );
 };
 
@@ -22727,12 +22728,12 @@ var Result = function Result(props) {
                 null,
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "" },
                     "Wyniki wyszukiwania dla:"
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "searchCity" },
                     _react2.default.createElement(
                         "strong",
                         null,
@@ -22750,7 +22751,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     date
                 )
             ),
@@ -22764,7 +22765,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     tempCelciusz,
                     " \xB0C"
                 )
@@ -22779,7 +22780,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     sunriseTime
                 )
             ),
@@ -22793,7 +22794,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     sunsetTime
                 )
             ),
@@ -22807,7 +22808,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     wind,
                     " m/s"
                 )
@@ -22822,7 +22823,7 @@ var Result = function Result(props) {
                 ),
                 _react2.default.createElement(
                     "td",
-                    null,
+                    { className: "singleResult" },
                     pressure,
                     " hPa"
                 )

@@ -19,32 +19,32 @@ const Result = props => {
         content = (
             <table>
                     <tr>
-                        <td>Wyniki wyszukiwania dla:</td>
-                        <td><strong>{city}</strong></td>
+                        <td className="">Wyniki wyszukiwania dla:</td>
+                        <td className="searchCity"><strong>{city}</strong></td>
                     </tr>
                     <tr>
                         <td>Dane dla dnia i godziny:</td>
-                        <td>{date}</td>
+                        <td className="singleResult">{date}</td>
                     </tr>
                     <tr>
                         <td>Aktualna temperatura:</td>
-                        <td>{tempCelciusz} &#176;C</td>
+                        <td className="singleResult">{tempCelciusz} &#176;C</td>
                     </tr>
                     <tr>
                         <td>Wschód słońca o:</td>
-                        <td>{sunriseTime}</td>
+                        <td className="singleResult">{sunriseTime}</td>
                     </tr>
                     <tr>
                         <td>Zachód słońca o:</td>
-                        <td>{sunsetTime}</td>
+                        <td className="singleResult">{sunsetTime}</td>
                     </tr>
                     <tr>
                         <td>Aktualna sila wiatru:</td>
-                        <td>{wind} m/s</td>
+                        <td className="singleResult">{wind} m/s</td>
                     </tr>
                     <tr>
                         <td>Aktualne ciśnienie:</td>
-                        <td>{pressure} hPa</td>
+                        <td className="singleResult">{pressure} hPa</td>
                     </tr>
             </table>
         )

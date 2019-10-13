@@ -13,6 +13,7 @@ const Form = props => {
                 onChange={props.change}
             />
             <button>Wyszukaj miasto</button>
+            <hr/>
         </form>
     )
 };

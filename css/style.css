@@ -5,6 +5,17 @@
 body {
     background: rgb(56,56,70);
     background: linear-gradient(90deg, rgba(56,56,70,1) 0%, rgba(15,150,237,1) 0%, rgba(78,104,213,1) 41%);
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid yellow;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 8vw;
+    color: white;
+    font-family: 'Kalam', cursive;
 }
 
 .app input,  .app button {
@@ -18,11 +29,12 @@ input {
     height: 7.5vh;
     margin: auto;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-bottom: 3vh;
     font-size: 4vw;
     font-weight: bold;
     color: grey;
+    font-family: 'Kalam', cursive;
 }
 
 button {
@@ -35,6 +47,15 @@ button {
     color: grey;
     font-weight: bold;
     background-color: yellow;
+    font-family: 'Kalam', cursive;
+}
+
+hr {
+    height: 2px;
+    width: 70%;
+    margin: auto;
+    margin-top: 8vh;
+    background-color: white;
 }
 
 .app button:hover {
@@ -44,7 +65,6 @@ button {
 
 .result {
     margin-top: 7vh;
-    border-top: 2px solid white;
     text-align: center;
 
 }
@@ -59,4 +79,18 @@ button {
 table {
     text-align: center;
     margin: auto;
+    font-family: 'Kalam', cursive;
+    font-size: 5vw;
+}
+td {
+    padding: auto;
+    font-weight: bold;
+}
+
+td.searchCity {
+    color: yellow;
+}
+
+td.singleResult {
+    color: white;
 }
