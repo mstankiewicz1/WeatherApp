@@ -15,6 +15,13 @@ h1 {
     font-family: 'Kalam', cursive;
 }
 
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+}
+
 .app input,  .app button {
     padding: 10px 20px;
     transition: .3s;
@@ -75,6 +82,9 @@ table {
     margin: auto;
     font-family: 'Kalam', cursive;
     font-size: 5vw;
+    border: 2px solid red;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 td {
     padding: auto;
