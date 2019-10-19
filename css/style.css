@@ -15,7 +15,7 @@ h1 {
     font-family: 'Kalam', cursive;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     h1 {
         font-size: 6vw;
     }
@@ -40,7 +40,7 @@ input {
     font-family: 'Kalam', cursive;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     input {
         width: 40vw;
         height: 10vw;
@@ -60,7 +60,7 @@ button {
     font-family: 'Kalam', cursive;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     button {
         width: 40vw;
         height: 10vw;
@@ -99,7 +99,7 @@ table {
     padding-right: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     table {
         font-size: 4vw;
         border: 2px solid red;
