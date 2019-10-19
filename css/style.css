@@ -154,7 +154,6 @@ table {
     margin: auto;
     font-family: 'Kalam', cursive;
     font-size: 5vw;
-    border: 2px solid red;
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 20px;
@@ -163,7 +162,6 @@ table {
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     table {
         font-size: 4vw;
-        border: 2px solid red;
         margin-bottom: 20px;
     }
 }
@@ -171,7 +169,6 @@ table {
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
     table {
         font-size: 3vw;
-        border: 2px solid red;
         margin-bottom: 20px;
     }
 }
@@ -179,7 +176,6 @@ table {
 @media screen and (min-width: 1280px){
     table {
         font-size: 2vw;
-        border: 2px solid red;
         margin-bottom: 20px;
     }
 }
