@@ -15,7 +15,6 @@ h1 {
     font-family: 'Kalam', cursive;
 }
 
-
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 6vw;
@@ -41,6 +40,13 @@ input {
     font-family: 'Kalam', cursive;
 }
 
+@media screen and (min-width: 768px) {
+    input {
+        width: 40vw;
+        height: 10vw;
+    }
+}
+
 button {
     display: block;
     width: 50vw;
@@ -52,6 +58,13 @@ button {
     font-weight: bold;
     background-color: yellow;
     font-family: 'Kalam', cursive;
+}
+
+@media screen and (min-width: 768px) {
+    button {
+        width: 40vw;
+        height: 10vw;
+    }
 }
 
 hr {
@@ -70,7 +83,6 @@ hr {
 .result {
     margin-top: 7vh;
     text-align: center;
-
 }
 
 .result h3, .result h4 {
@@ -86,6 +98,14 @@ table {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+@media screen and (min-width: 768px) {
+    table {
+        font-size: 4vw;
+        border: 2px solid red;
+    }
+}
+
 td {
     padding: auto;
     font-weight: bold;
